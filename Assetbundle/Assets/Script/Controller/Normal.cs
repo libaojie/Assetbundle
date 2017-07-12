@@ -1,15 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Normal : MonoBehaviour {
+public class Normal : MonoBehaviour 
+{
+	public string resourceName = "";
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		ResourceManager.Instance.Init();
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+
+	void OnGUI()
+	{
+		if (GUILayout.Button("Main Assetbundle"))
+		{
+			GameObject go = GameObject.Instantiate(ResourceManager.Instance.GetObjectDirectly<UnityEngine.Object>(resourceName)) as GameObject;
+		}
+
+
+
 	}
+
+
 }
