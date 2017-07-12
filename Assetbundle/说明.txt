@@ -1,0 +1,9 @@
+
+
+Simple场景
+1、采用BuildPipeline.BuildAssetBundle逐个打包和一块打包两种方式，不过Unity已经不再建议使用
+2、通过SimpleMain.cs中 WWW 拉取生成
+
+
+
+-------------------------------------------------

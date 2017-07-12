@@ -2,8 +2,14 @@
 using System.Collections;
 using UnityEditor;
 
+/// <summary>
+/// 打包工具
+/// </summary>
 public class AssetbundleTool
 {
+	/// <summary>
+	/// 逐单个的创建Assetbundle
+	/// </summary>
 	[MenuItem("Custom Editor/Create AssetBunldes Main")]
 	static void CreateAssetBunldesMain()
 	{
@@ -32,6 +38,9 @@ public class AssetbundleTool
 
 	}
 
+	/// <summary>
+	/// 将所有资源 打包成一个bundle
+	/// </summary>
 	[MenuItem("Custom Editor/Create AssetBunldes ALL")]
 	static void CreateAssetBunldesALL()
 	{
