@@ -13,7 +13,7 @@ public class AssetPlatform
 	/// <summary>
 	/// 资源目录
 	/// </summary>
-	protected static string ResourcesName = "Asset/Resources/";
+	protected static string ResourcesName = "Assets/Resources/";
 
 	/// <summary>
 	/// Bundle后缀
@@ -93,7 +93,7 @@ public class AssetPlatform
 		// 新建临时Bundle文件夹
 		tempBundlePath = Application.dataPath + "/AssetBundles";
 		MakeDirectoryExist(tempBundlePath);
-
+		ResourceVersion = "v1.0";
 		return true;
 	}
 

@@ -10,7 +10,7 @@ public class AssetbundleTool
 	/// <summary>
 	/// 逐单个的创建Assetbundle
 	/// </summary>
-	[MenuItem("Custom Editor/Create AssetBunldes Main")]
+	[MenuItem("Tools/AssetTool/Create AssetBunldes Main")]
 	static void CreateAssetBunldesMain()
 	{
 		//获取在Project视图中选择的所有游戏对象
@@ -41,7 +41,7 @@ public class AssetbundleTool
 	/// <summary>
 	/// 将所有资源 打包成一个bundle
 	/// </summary>
-	[MenuItem("Custom Editor/Create AssetBunldes ALL")]
+	[MenuItem("Tools/AssetTool/Create AssetBunldes ALL")]
 	static void CreateAssetBunldesALL()
 	{
 
@@ -67,5 +67,11 @@ public class AssetbundleTool
 		}
 	}
 
+	[MenuItem("Tools/AssetTool/AssetBuild/Editor")]
+	static void AssetBuildEditor()
+	{
+		AssetPlatform chain = new AssetEditor();
+		chain.Process();
+	}
 
 }
