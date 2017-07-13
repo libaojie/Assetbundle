@@ -77,6 +77,12 @@ public class ResourceManager : MonoBehaviour
 	public void Release()
 	{
 		instance = null;
+
+		ClearObjectMaps();
+		allBundleNames.Clear();
+		ClearDependedBundle();
+		assetBundleManifest = null;
+
 	}
 
 	#region 公共接口
@@ -336,6 +342,39 @@ public class ResourceManager : MonoBehaviour
 		return bundle;
 	}
 	
+
+	#endregion
+
+	#region 清理
+
+	/// <summary>
+	/// 清理
+	/// </summary>
+	private void ClearObjectMaps()
+	{
+		var itr = objectMaps.Values.GetEnumerator();
+		while (itr.MoveNext())
+		{
+			itr.Current.Clear();
+		}
+		objectMaps.Clear();
+	}
+
+	/// <summary>
+	/// 清理 关系
+	/// </summary>
+	private void ClearDependedBundle()
+	{
+		var itr = dependedBundle.GetEnumerator();
+		while (itr.MoveNext())
+		{
+			if (itr.Current.Value != null)
+			{
+				itr.Current.Value.Unload(false);
+			}
+		}
+		dependedBundle.Clear();
+	}
 
 	#endregion
 }

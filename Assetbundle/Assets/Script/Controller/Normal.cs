@@ -33,5 +33,13 @@ public class Normal : MonoBehaviour
 
 	}
 
+	void OnDestory()
+	{
+		if (resourceManager != null)
+		{
+			resourceManager.Release();
+		}
+	}
+
 
 }
