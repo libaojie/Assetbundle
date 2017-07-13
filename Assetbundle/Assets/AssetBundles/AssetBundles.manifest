@@ -1,0 +1,9 @@
+ManifestFileVersion: 0
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui/cube1.bundle
+      Dependencies: {}
+    Info_1:
+      Name: ui/cube2.bundle
+      Dependencies: {}
