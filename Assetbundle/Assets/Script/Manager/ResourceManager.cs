@@ -284,7 +284,10 @@ public class ResourceManager : MonoBehaviour
 			return null;
 		}
 
-		return ab;
+		UnityEngine.Object gobj;
+		gobj = ab.LoadAsset(name, type) as UnityEngine.Object;
+
+		return gobj;
 	}
 
 	/// <summary>

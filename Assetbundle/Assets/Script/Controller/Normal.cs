@@ -17,7 +17,8 @@ public class Normal : MonoBehaviour
 	{
 		if (GUILayout.Button("Main Assetbundle"))
 		{
-			GameObject go = GameObject.Instantiate(ResourceManager.Instance.GetObjectDirectly<UnityEngine.Object>(resourceName)) as GameObject;
+			Object ob = ResourceManager.Instance.GetObjectDirectly<UnityEngine.Object>(resourceName);
+			GameObject go = GameObject.Instantiate(ob) as GameObject;
 			if (go != null)
 			{
 			
